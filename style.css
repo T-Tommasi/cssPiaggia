@@ -1,0 +1,255 @@
+* {
+   /* border: red 1px solid;*/
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    background: url(img/double-bubble-outline.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    background-color: #E8F1F2;
+    margin: 0;
+    padding: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    box-shadow: 0px 19px 3px -10px rgba(0,0,0,0.1),0px 27px 32px -14px rgba(0,0,0,0.1);
+}
+
+header>img {
+    margin: auto;
+    height: 100%;
+}
+
+header>ul {
+    list-style: none;
+}
+
+.rightMenu,.leftMenu {
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+.rightMenu>li>a,.leftMenu>li>a {
+    color: #13293D;
+    text-decoration: none;  
+    text-align: center;
+    font-size: 1.5em;
+    transition: color 0.5s ease;
+}
+
+.rightMenu a:hover, .leftMenu a:hover {
+    color: red;
+}
+
+.heroBanner {
+    width: 100%;
+    height: 100dvh;
+    background-image: url(img/priscilla-du-preez-ggeZ9oyI-PE-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    margin: 0;
+}
+
+.heroBanner::before {
+    background-color: black;
+    opacity: 0.3;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
+
+.heroText, .buttons {
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.heroText {
+    font-size: 2.2em;
+    color: white;
+    padding: 10%;
+    position: relative;
+    grid-column: 1 / 3;
+    margin: 0;
+}
+
+.heroText>p{
+    font-size: 0.5em;
+}
+
+.container::before {
+    background: #E8F1F2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    opacity: 0.45;
+}
+.container {
+    grid-template: auto auto auto/ 1fr 1fr 1fr;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    }
+
+.content {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    padding: 5%;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 5%;
+    height: 40dvh;
+}
+
+.content>img {
+    width: 55dvh;
+    height: 40dvh;
+}
+
+.post{
+    grid-row: 2 / 3;
+    grid-column: 1 span;
+    width: 100dvw;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background:url(img/drew-hays-agGIKYs4mYs-unsplash.jpg);
+    position: relative;
+    background-attachment: fixed;
+    padding: 2%;
+    text-align: center;
+    box-shadow: inset 0px 12px 17px -6px rgba(0,0,0,0.1),inset 0px -10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.post>form {
+    gap: 5%;
+    position: relative;
+}
+
+.post>button {
+    border-radius: 15px;
+    width: 6dvw;
+    height: 4dvh;
+    margin: 0 auto;
+    display: block;
+}
+
+.reviews {
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    grid-row: 3 / 4;
+    padding: 5%;
+}
+
+.reviews img {
+    width: 50%;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    align-self: flex-end;
+    justify-self: right;
+}
+
+.reviews p {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+.reviews h5 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#review1, #review2, #review3 {
+    background-color: #13293D;
+    color: white;
+    padding: 2%;
+    width: 55dvh;
+    height: 35dvh;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px -8px rgba(0,0,0,0.1),0px 10px 6px 0px rgba(0,0,0,0.1),0px 10px 31px -3px rgba(0,0,0,0.1);
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #13293D;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr 1fr;
+    color: white;
+    box-shadow: 0px 10px 31px -3px rgba(0,0,0,0.1);
+}
+
+#footerMenu1 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+#footerMenu2 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+footer li, footer ul {
+    color: white;
+    list-style: none;
+}
+
+footer ul {
+    text-decoration: underline;
+}
+
+#firstH3 {
+    text-align: center;
+    text-decoration: none;
+    grid-column: 3 / 4;
+    grid-row: 1/2;
+}
+
+#secondH3 {
+    text-align: center;
+    text-decoration: none;
+    grid-column: 4 / 5;
+    grid-row: 1/2;
+}
+
+.images {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+}
