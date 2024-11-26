@@ -6,6 +6,7 @@
     <title>Progetto Piaggia</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="grid">
@@ -38,17 +39,41 @@
         </div>
         <div class="post flex">
             <h1>Subscribe to our newsletter!</h1>
-            <form action="get" class="flex">
-                <div>
-                <label for="name">Name: </label>
-                <input type="text" id="name">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci commodi optio officia rem magni ullam rerum repellendus tempore quibusdam,<br> laudantium molestiae ea, perferendis, minus totam in architecto consectetur dolores blanditiis.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam minus illum possimus eaque quidem dolorem quibusdam officiis, dignissimos adipisci deserunt voluptate non nemo dolor quasi explicabo asperiores, consequatur placeat amet?<br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consequuntur ullam tempore veniam, doloribus tempora unde molestiae vero perferendis quibusdam tenetur enim cum eaque quos optio sit, vitae repudiandae reiciendis.
+            Error numquam vel quidem inventore repellat non eligendi neque commodi tempore modi aut ex magni architecto enim dolore optio quam aspernatur, officiis omnis soluta ipsa. Laborum deserunt nobis quisquam odit?</p>
+            <button class="fakeSubscribe" id="subscribe">Subscribe now!</button>
+            <dialog>
+                <div class="flex">
+                    <form action="get" class="flex">
+                        <div class="flex">
+                            <div>
+                                <label for="name">Name: </label>
+                                <input type="text" id="name">
+                            </div>
+                            <div>
+                                <label for="email">Email: </label>
+                                <input type="email" id="email">
+                            </div>
+                            <div>
+                                <label for="telephone">Phone: </label>
+                                <input type="tel" id="telephone">
+                            </div>
+                            <div>
+                                <label for="birth">Date of birth: </label>
+                                <input type="date" id="birth">
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <h3>Thank you!</h3>
+                        <h4>We promise we wont spam you!</h4>
+                        <h8>maybe...</h8>
+                    </div>
+                    <button type="submit" id="fakeSubmit">Submit!</button>
                 </div>
-                <div>
-                <label for="email">Email: </label>
-                <input type="email">
-                </div>
-            </form>
-            <button type="submit" id="fakeSubmit">Submit!</button>
+            </dialog>
         </div>
         <div class="reviews flex">
             <div id="review1" class="grid">
@@ -84,9 +109,28 @@
             </ul>
         <h3 id='secondH3'>And a few more fake</h3>
         <ul id="footerMenu2">
-            <li class="footerMenuText">Fake menu item #1</li>
-            <li class="footerMenuText">Fake menu item #2</li>
-            <li class="footerMenuText">Fake menu item #3</li>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Project Duration</td>
+                        <td>1 Month</td>
+                    </tr>
+                    <tr>
+                        <td>Team Members</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Lines of Code</td>
+                        <td>¦230 c.a.</td>
+                    </tr>
+                </tbody>
+            </table>
         </ul>
     </footer>
 </body>
