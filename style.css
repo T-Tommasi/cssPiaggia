@@ -292,6 +292,10 @@ table {
     color: black;
 }
 
+thead{
+    border: black 1px solid;
+}
+
 th {
     background-color: #13293D;
     color: white;
