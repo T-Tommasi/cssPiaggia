@@ -135,6 +135,10 @@ header>ul {
     height: 40dvh;
 }
 
+.post::before {
+    backdrop-filter: blur(15px);
+}
+
 .post{
     grid-row: 2 / 3;
     grid-column: 1 span;
@@ -149,6 +153,8 @@ header>ul {
     padding: 2%;
     text-align: center;
     box-shadow: inset 0px 12px 17px -6px rgba(0,0,0,0.1),inset 0px -10px 15px -3px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+
 }
 
 dialog {
@@ -198,6 +204,7 @@ dialog>button {
 .reviews {
     justify-content: space-between;
     align-items: center;
+    width: auto;
     gap: 15px;
     position: relative;
     grid-row: 3 / 4;
@@ -209,12 +216,14 @@ dialog>button {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
     align-self: flex-end;
-    justify-self: right;
+    justify-self: flex-end;
+    position: relative;
 }
 
 .reviews p {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
+    margin: 0;
 }
 
 .reviews h5 {
